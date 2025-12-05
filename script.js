@@ -11,6 +11,7 @@ const sampleGames = [
 const grid = document.getElementById('gameGrid');
 const tpl = document.getElementById('gameCardTpl');
 
+// Populate sample games
 sampleGames.forEach(g=>{
   const node = tpl.content.cloneNode(true);
   node.querySelector('.thumb').src = g.thumb;
@@ -21,6 +22,23 @@ sampleGames.forEach(g=>{
   node.querySelector('.info').addEventListener('click', ()=> alert(g.title + "\n\n" + g.desc));
   grid.appendChild(node);
 });
+
+// Add Tic-Tac-Toe Game Card dynamically
+const ticTacToeCard = document.createElement("div");
+ticTacToeCard.classList.add("game-card");
+ticTacToeCard.innerHTML = `
+  <img class="thumb" src="assets/hero-illustration.svg" alt="Tic Tac Toe" />
+  <div class="meta">
+    <h3 class="title">Tic Tac Toe</h3>
+    <p class="desc">Play the classic Tic Tac Toe game, hosted on the cloud.</p>
+    <div class="game-actions">
+      <a class="btn small play" href="https://funny-cucurucho-0d31b4.netlify.app/" target="_blank">
+        Play Now
+      </a>
+    </div>
+  </div>
+`;
+grid.appendChild(ticTacToeCard);
 
 // Contact form (fake)
 document.getElementById('contactForm').addEventListener('submit',(e)=>{
