@@ -1,13 +1,10 @@
-// script.js - populate only Tic-Tac-Toe game and handle UI interactions
+// Update footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Game Grid
 const grid = document.getElementById('gameGrid');
-const tpl = document.getElementById('gameCardTpl');
 
-// Clear existing games (if any)
-grid.innerHTML = "";
-
-// Add Tic-Tac-Toe Game Card dynamically
+// Add only Tic Tac Toe game
 const ticTacToeCard = document.createElement("div");
 ticTacToeCard.classList.add("game-card");
 ticTacToeCard.innerHTML = `
@@ -24,19 +21,19 @@ ticTacToeCard.innerHTML = `
 `;
 grid.appendChild(ticTacToeCard);
 
-// Contact form (fake)
-document.getElementById('contactForm').addEventListener('submit',(e)=>{
+// Contact form handling
+document.getElementById('contactForm').addEventListener('submit', (e) => {
   e.preventDefault();
   const name = document.getElementById('name').value.trim();
   const msg = document.getElementById('message').value.trim();
   const out = document.getElementById('formMsg');
-  out.textContent = `Thanks ${name || 'friend'}! We received your message${msg?': "'+msg+'"':''}.`;
+  out.textContent = `Thanks ${name || 'friend'}! We received your message${msg ? ': "' + msg + '"' : '.'}`;
   e.target.reset();
 });
 
 // Mobile menu toggle
 const menuBtn = document.getElementById('menuBtn');
-menuBtn.addEventListener('click', ()=>{
+menuBtn.addEventListener('click', () => {
   const nav = document.querySelector('.nav');
   nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
   nav.style.flexDirection = 'column';
