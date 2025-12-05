@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Arcadia — Gaming Portal</title>
   <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="Arcadia — a sleek gaming portal showcasing featured games, news, and community events.">
+  <meta name="description" content="Arcadia — a sleek gaming portal showcasing featured games.">
 </head>
 <body>
   <header class="site-header">
@@ -13,9 +13,7 @@
       <a class="logo" href="#">Arcadia</a>
       <nav class="nav">
         <a href="#featured">Featured</a>
-        <a href="#news">News</a>
-        <a href="#community">Community</a>
-        <a class="cta" href="#contact">Get Started</a>
+        <a class="cta" href="#featured">Get Started</a>
       </nav>
       <button id="menuBtn" class="burger" aria-label="Open menu">☰</button>
     </div>
@@ -26,10 +24,9 @@
       <div class="container hero-inner">
         <div>
           <h1>Welcome to Arcadia</h1>
-          <p>Your portal for game drops, reviews, and community events — discover, play, compete.</p>
+          <p>Your portal for classic games — discover, play, compete.</p>
           <div class="hero-actions">
-            <a class="btn" href="#featured">Browse Games</a>
-            <a class="btn ghost" href="#news">Latest News</a>
+            <a class="btn" href="#featured">Play Tic Tac Toe</a>
           </div>
         </div>
         <div class="hero-art">
@@ -41,62 +38,17 @@
     <section id="featured" class="section container">
       <h2>Featured Games</h2>
       <div id="gameGrid" class="grid">
-        <!-- Only Tic Tac Toe Game Card -->
+        <!-- Only Tic Tac Toe will appear here -->
       </div>
-    </section>
-
-    <section id="news" class="section container">
-      <h2>Latest News</h2>
-      <article class="news-list">
-        <div class="news-item">
-          <h3>Arcadia Launch Tournament — Signups Open</h3>
-          <p>Join our launch tournament for prizes and in-game swag. Teams of 3 — registration ends soon.</p>
-        </div>
-        <div class="news-item">
-          <h3>Patch 1.2 Released</h3>
-          <p>Balancing updates and QoL changes rolled out across our featured titles.</p>
-        </div>
-      </article>
-    </section>
-
-    <section id="community" class="section container">
-      <h2>Community Events</h2>
-      <div class="cards">
-        <div class="card">
-          <h4>Weekly Speedrun</h4>
-          <p>Compete every Sunday with a live leaderboard.</p>
-        </div>
-        <div class="card">
-          <h4>Indie Showcase</h4>
-          <p>Spotlight on local indie developers and demos.</p>
-        </div>
-        <div class="card">
-          <h4>Co-op Nights</h4>
-          <p>Find teams and meet new players in our Discord.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section container contact">
-      <h2>Get in touch</h2>
-      <form id="contactForm" class="contact-form">
-        <input type="text" id="name" placeholder="Your name" required />
-        <input type="email" id="email" placeholder="you@example.com" required />
-        <textarea id="message" rows="4" placeholder="Message"></textarea>
-        <button class="btn" type="submit">Send</button>
-      </form>
-      <div id="formMsg" class="form-msg" aria-live="polite"></div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <p>© <span id="year"></span> Arcadia • Built with ❤️ for gamers</p>
-      <p class="muted">Host this repo with GitHub Pages — see README for steps.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
