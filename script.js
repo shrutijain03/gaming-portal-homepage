@@ -21,16 +21,6 @@ ticTacToeCard.innerHTML = `
 `;
 grid.appendChild(ticTacToeCard);
 
-// Contact form handling
-document.getElementById('contactForm').addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const msg = document.getElementById('message').value.trim();
-  const out = document.getElementById('formMsg');
-  out.textContent = `Thanks ${name || 'friend'}! We received your message${msg ? ': "' + msg + '"' : '.'}`;
-  e.target.reset();
-});
-
 // Mobile menu toggle
 const menuBtn = document.getElementById('menuBtn');
 menuBtn.addEventListener('click', () => {
