@@ -1,27 +1,11 @@
-// script.js - populate games and handle UI interactions
+// script.js - populate only Tic-Tac-Toe game and handle UI interactions
 document.getElementById('year').textContent = new Date().getFullYear();
-
-const sampleGames = [
-  {title: "Nebula Drift", desc: "Fast-paced space racer with neon tracks.", thumb: "assets/game1.jpg"},
-  {title: "Citadel Siege", desc: "Tactical castle defense with roguelike depth.", thumb: "assets/game2.jpg"},
-  {title: "Pixel Pioneers", desc: "Co-op survival with charming pixel art.", thumb: "assets/game3.jpg"},
-  {title: "Voidbound", desc: "Single-player narrative with branching choices.", thumb: "assets/game4.jpg"}
-];
 
 const grid = document.getElementById('gameGrid');
 const tpl = document.getElementById('gameCardTpl');
 
-// Populate sample games
-sampleGames.forEach(g=>{
-  const node = tpl.content.cloneNode(true);
-  node.querySelector('.thumb').src = g.thumb;
-  node.querySelector('.thumb').alt = g.title + " thumbnail";
-  node.querySelector('.title').textContent = g.title;
-  node.querySelector('.desc').textContent = g.desc;
-  node.querySelector('.play').addEventListener('click', ()=> alert('Demo launch: ' + g.title));
-  node.querySelector('.info').addEventListener('click', ()=> alert(g.title + "\n\n" + g.desc));
-  grid.appendChild(node);
-});
+// Clear existing games (if any)
+grid.innerHTML = "";
 
 // Add Tic-Tac-Toe Game Card dynamically
 const ticTacToeCard = document.createElement("div");
